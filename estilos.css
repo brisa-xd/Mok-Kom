@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body { 
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#16131F;
+    color: #F0D9E4;
+    line-height: 1.6;
+}
+header { /*El encabezado de la página y lo que tiene dentro*/
+    text-align: center;
+    padding: 45px 20px;
+    background: linear-gradient(135deg, #4A3F4B, #3B2854);
+    border-bottom: 2px solid #A78BFA;
+}
+
+header h1 {
+    color: #F0ABFC;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    text-shadow: 0 0 15px #A78BFA;
+}
+
+header p {
+    color: #D8CCF5;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+nav {/*la barra de navegación*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 18px;
+    background-color: #1B1929;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+nav a {
+    color: #E9D5FF;
+    text-decoration: none;
+    padding: 9px 14px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+nav a:hover {
+    background-color: #A78BFA;
+    color: #11111B;
+    transform: translateY(-2px);
+}
+main { /*Las secciones de la página*/
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+section {
+    background-color: #252337;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 18px;
+    border: 1px solid #40365C;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.2);
+    scroll-margin-top: 100px;
+}
+section h2 {
+    color: #F0ABFC;
+    margin-bottom: 15px;
+    font-size: 1.7rem;
+}
+section h3 {
+    color: #C4B5FD;
+    margin-bottom: 10px;
+}
+section p {
+    color: #D8D3E8;
+    margin-bottom: 12px;
+}
+#inicio { /* la seccion del inicio*/
+    text-align: center;
+    padding: 55px 30px;
+    background: linear-gradient(135deg, #252337, #38294D);
+}
+#inicio h2 {
+    font-size: 2rem;
+}
+#inicio p {
+    max-width: 650px;
+    margin: 12px auto;
+}
+#listadePublicaciones {/* la seccion de las publicaciones */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+    margin-top: 25px;
+}
+.publicacion {
+    background-color: #302B45;
+    border: 1px solid #66528D;
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+.publicacion:hover {
+    transform: translateY(-5px);
+    border-color: #F0ABFC;
+    box-shadow: 0 5px 18px rgba(167, 139, 250, 0.15);
+}
+.publicacion h3 {
+    color: #F0ABFC;
+    font-size: 1.2rem;
+}
+.publicacion p {
+    margin: 12px 0;
+    overflow-wrap: anywhere;
+}
+.publicacion .categoria {
+    color: #67E8F9;
+    font-size: 0.9rem;
+}
+.cantidadelikes {
+    color: #FDE68A;
+    font-weight: bold;
+    margin: 0 8px;
+}
+.publicacion button {
+    margin-top: 12px;
+    margin-right: 5px;
+}
+.publicacion .boton-eliminar {
+    background-color: #713B59;
+}
+.publicacion .boton-eliminar:hover {
+    background-color: #A34E75;
+}
+form { /*la seccion de los formularios*/
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+label {
+    color: #E9D5FF;
+    font-weight: bold;
+    margin-top: 5px;
+}
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #66528D;
+    border-radius: 9px;
+    background-color: #191728;
+    color: #F4F0FF;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+}
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #F0ABFC;
+    box-shadow: 0 0 7px rgba(240, 171, 252, 0.3);
+}
+textarea {
+    resize: vertical;
+}
+select {
+    cursor: pointer;
+}
+button { /*los botones que hay en la página*/
+    background-color: #A78BFA;
+    color: #171326;
+    border: none;
+    border-radius: 10px;
+    padding: 11px 18px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background-color: #F0ABFC;
+    transform: translateY(-2px);
+}
+button:active {
+    transform: scale(0.97);
+}
+#mensajePublicacion {/* los mensajes */
+    margin-top: 15px;
+    color: #67E8F9;
+    font-weight: bold;
+}
+#apuntes #lista { /*la seccion de los apuntes*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.apunte {
+    background-color: #302B45;
+    border-left: 4px solid #67E8F9;
+    padding: 18px;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+.apunte h4 {
+    color: #67E8F9;
+    margin-bottom: 8px;
+}
+.apunte button {
+    margin-top: 10px;
+}
+
+#listaflashcards { /*los flashcards*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.flashcard {
+    background-color: #302B45;
+    border: 1px solid #A78BFA;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.flashcard h4 {
+    color: #F0ABFC;
+    margin-bottom: 12px;
+}
+.flashcard .respuesta {
+    color: #67E8F9;
+    margin-top: 12px;
+}
+.flashcard button {
+    margin-top: 12px;
+}
+#perfil { /*el perfil del usuario*/
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    width: 110px;
+    padding: 8px;
+    margin: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    z-index: 100;
+}
+.perfiltitulo {/* el texto de mi perfil encima del circulo del perfil*/
+    color: #F0ABFC;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+.perfilcirculo { /* el circulito del perfil */
+    width: 52px;
+    height: 52px;
+   align-items: center;
+    border-radius: 50%;
+    background-color: #A78BFA;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+     margin: auto;
+    font-size: 25px;
+    cursor: pointer;
+   border: 2px solid #F0ABFC;
+     overflow: hidden;
+}
+   .perfilcirculo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.perfilcirculo:hover {
+    transform: scale(1.1);
+    background-color: #F0ABFC;
+}
+.perfilInformacion { /* el cuadro donde esta la informacion del perfil del usuario */
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 230px;
+    padding: 18px;
+    background-color: #252337;
+    border: 1px solid #A78BFA;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+#perfil:hover .perfilInformacion, /*mostrar la informacion del perfil*/
+#perfil:focus-within .perfilInformacion {
+    display: block;
+}
+.perfilInformacion h2 {
+    color: #F0ABFC;
+    font-size: 18px;
+}
+.perfilInformacion p {
+    color: #E0D8F0;
+    font-size: 13px;
+    margin-top: 8px;
+}
+@media (max-width: 600px) {/*que el estilo del perfil se pueda adaptar a cualquier dispositivo */
+    #perfil {
+        top: 10px;
+        right: 10px;
+    }
+    .perfilcirculo {
+        width: 45px;
+        height: 45px;
+    }
+}
+#acercade { /* la parte del acerca de mi página*/
+    text-align: center;
+}
+#acercade p {
+    max-width: 750px;
+    margin: 12px auto;
+}
+footer {/* el pie de la página  o el final de página*/
+    text-align: center;
+    padding: 25px;
+    background-color: #1B1929;
+    border-top: 2px solid #A78BFA;
+    color: #C4B5FD;
+}
+footer p {
+    margin: 5px;
+}
+@media (max-width: 600px) { /*que el diseño sea adaptable*/
+   header h1 {
+        font-size: 2.3rem;
+    }
+    nav {
+        position: static;
+        gap: 6px;
+    }
+    nav a {
+        font-size: 0.85rem;
+        padding: 8px 10px;
+    }
+    main {
+        width: 94%;
+    }
+    section {
+        padding: 20px;
+  }
+    #inicio h2 {
+        font-size: 1.6rem;
+    }
+}

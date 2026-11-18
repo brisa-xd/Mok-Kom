@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="MOK KOM: para estudiar">
+
+    <title>MOK KOM</title>
+
+    <link rel="stylesheet" href="estilos.css"><!--Vincular el css-->
+</head>
+
+<body>
+    <header><!-- El encabezado de la página -->
+        <h1>MOK KOM</h1> <!--titulo de la página-->
+        <p>Atraviesa la niebla</p><!--parrafo de la página-->
+    </header>
+
+    <nav><!-- Menú de navegación -->
+        <a href="#inicio">Inicio</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#crearpublicacion">Crear publicación</a>
+        <a href="#apuntes">Mis apuntes</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#acercade">Acerca de</a>
+    </nav>
+
+ <main><!--El contenido que tiene la página-->
+
+        <!-- Sección de inicio de la página -->
+    <section id="inicio">
+
+        <h2>¡Bienvenido a MOK KOM!</h2>
+
+        <p>Un lugar para compartir consejos y experiencias sobre el estudio.</p>
+
+        <p>Cada logro cuenta 
+            y cada idea tiene un lugar para brillar.</p>
+
+        </section>
+
+    <section id="publicaciones"><!-- Sección de publicaciones que tiene la página -->
+        <h2>Comunidad Kumi</h2>
+
+        <p> Descubre lo que otras personas comparten.</p>
+
+        <label for="filtroCategoria"><!-- Para buscar una publicación por categoría-->
+            Filtrar por categoría:
+        </label>
+
+        <select id="filtroCategoria">
+            <option value="Todas">Todas</option>
+            <option value="Estudio">Estudio</option> <!--Las categorías -->
+            <option value="Motivación">Motivación</option>
+            <option value="Consejos">Consejos</option>
+        </select>
+
+        <div id="listadePublicaciones"> <!--donde aparecen las publicaciones-->
+                
+         <article class="publicacion" data-id="1"><!-- primera publicación de ejemplo -->
+            <h3>Liudmila</h3>
+            <p> Al fin terminé todas mis tareas.
+                ¡Estoy muy feliz!</p>
+
+            <p class="categoria">Categoría: Motivación</p>
+            <button type="button" class="botonLike">
+                Me gusta
+            </button>
+
+            <span class="cantidadelikes">3</span>
+            <span>Me gusta</span>
+
+            <button type="button" class="botoneliminar">
+                Eliminar
+            </button>
+
+        </article>
+
+        <article class="publicacion" data-id="2"><!-- segunda publicación de ejemplo -->
+            <h3>Alexander</h3>
+            <p> Mi consejo es que deben organizar todo el material
+                    para estudiar mejor.</p>
+
+            <p class="categoria">Categoría: Consejos</p>
+
+            <button type="button" class="botonLike">
+                Me gusta
+            </button>
+
+            <span class="cantidadelikes">5</span>
+            <span>Me gusta</span>
+
+            <button type="button" class="boton-eliminar">
+                Eliminar
+            </button>
+
+        </article>
+
+
+                <!-- tercera publicación de ejemplo -->
+        <article class="publicacion" data-id="3">
+            <h3>Sasha</h3>
+            <p> Hoy aprendí cómo formar palabras 
+                en japonés, me siento feliz porque ya sé hacerlo.</p>
+
+            <p class="categoria">Categoría: Estudio</p>
+
+            <button type="button" class="botonLike">
+                 Me gusta
+            </button>
+
+            <span class="cantidadelikes">22</span>
+            <span>Me gusta</span>
+
+            <button type="button" class="boton-eliminar">
+                Eliminar
+            </button>
+
+        </article>
+
+    </div>
+</section>
+
+
+        <!-- Crear publicación -->
+    <section id="crearpublicacion">
+        <h2>Crear publicación</h2>
+            <p>Comparte tus ideas, consejos y experiencias
+                con la comunidad Kumi.</p>
+
+            <form id="formpublicacion">
+
+            <label for="nombreUsuario">
+                Nombre de usuario:
+            </label>
+            <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre" required>
+
+            <label for="contenidoPublicacion">
+                Contenido:
+            </label>
+            <textarea id="contenidoPublicacion" rows="5" maxlength="300" placeholder="¿Qué quieres compartir?" required></textarea>
+
+            <label for="categoriaPublicacion">
+                Categoría:
+            </label>
+
+            <select id="categoriaPublicacion" required>
+                <option value="Estudio">Estudio</option>
+                <option value="Motivación">Motivación</option>
+                <option value="Consejos">Consejos</option>
+            </select>
+
+            <button type="submit">
+                 Publicar
+            </button>
+            </form>
+            <p id="mensajePublicacion"></p>
+
+    </section>
+
+    <section id="apuntes"><!-- Sección de los apuntes del usuario -->
+        <h2>Mis apuntes</h2>
+         <p>Guarda tus notas e ideas importantes
+            para verlas cuando quieras.</p>
+
+        <form id="formApunte">
+
+            <label for="titulo">
+                Título del apunte:
+            </label>
+            <input type="text" id="titulo" placeholder="Nombre del apunte" required>
+
+            <label for="contenido">
+                Contenido:
+            </label>
+            <textarea id="contenido" rows="5" placeholder="Escribe tu apunte..." required></textarea>
+
+            <button type="submit">
+                Guardar apunte
+            </button>
+            </form>
+
+         <h3>Mis notas guardadas</h3>
+        <div id="lista-apuntes"></div>
+
+    </section>
+
+    <section id="flashcards"><!-- Sección para crear flashcards de estudio  -->
+        <h2>Mis Flashcards</h2>
+        <p>Crea tarjetas para memorizar lo que has aprendido.</p>
+
+        <form id="formcards">
+            <label for="pregunta">
+                 Pregunta:
+            </label>
+            <input type="text" id="pregunta" placeholder="Escribe una pregunta" required> <!--El usuario crea una pregunta para memorizar-->
+
+            <label for="respuesta">
+                Respuesta:
+            </label>
+            <textarea id="respuesta" rows="3" placeholder="Escribe la respuesta" required></textarea>
+
+            <button type="submit">
+                Crear flashcard
+            </button>
+
+        </form>
+            <h3>Mis tarjetas</h3>
+
+            <div id="lista-flashcards"></div>
+    </section>
+
+    <section id="perfil"> <!-- Mini sección del perfil -->
+        <p class="perfiltitulo">MI PERFIL</p>
+
+        <div class="perfilcirculo" tabindex="0">
+             <img src="IMG/image.png" alt="Foto de perfil"></div>
+        <div class="perfilInformacion">
+            <h2>Kumita ⭐</h2>
+            <p>Hola, este es mi perfil en MOK KOM.</p>
+
+            <p>Me gusta escuchar música, leer libros 
+            románticos y jugar videojuegos.</p>
+          
+    </section>
+
+    <section id="acercade"><!-- Sección de la información acerca de la página -->
+        <h2>Acerca de MOK KOM</h2>
+        <p> MOK KOM es un sitio web creado para que las personas puedan tener apuntes 
+            o compartir sus experiencias de estudio, además de
+        poder hacer publicaciones y hacer flashcards.<!--propósito de la página-->
+        </p>
+        <p>
+            Nuestro nombre viene de "Mok", que es niebla, y "Kom", que es filoso en el idioma tailandés. Juntos
+            forman la palabra <strong>Mok Kom</strong>, que sería niebla filosa.</p> <!--Origen del nombre-->
+        </section>
+
+    </main>
+
+
+    <footer><!-- Parte final de la página -->
+        <p>MOK KOM - Brisa</p>
+        <p>Del caos nacen las estrellas.</p>
+    </footer>
+    
+    <script src="script.js"></script> <!-- vinculación con el javascript -->
+</body>
+</html>
