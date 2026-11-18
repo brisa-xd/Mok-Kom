@@ -207,7 +207,7 @@ button:active {
     background-color: #302B45;
     border-left: 4px solid #67E8F9;
     padding: 18px;
-    border-radius: 10px;
+    border-radius: 11px;
     overflow-wrap: anywhere;
 }
 .apunte h4 {
