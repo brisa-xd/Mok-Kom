@@ -275,7 +275,7 @@ button:active {
      margin: auto;
     font-size: 25px;
     cursor: pointer;
-   border: 2px solid #F0ABFC;
+   border: 3px solid #F0ABFC;
      overflow: hidden;
 }
    .perfilcirculo img {
