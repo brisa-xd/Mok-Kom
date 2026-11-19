@@ -36,7 +36,7 @@ nav {/*la barra de navegación*/
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-    padding: 18px;
+    padding: 20px;
     background-color: #1B1929;
     position: sticky;
     top: 0;
@@ -45,7 +45,7 @@ nav {/*la barra de navegación*/
 nav a {
     color: #E9D5FF;
     text-decoration: none;
-    padding: 9px 14px;
+    padding: 10px 14px;
     border-radius: 20px;
     transition: 0.3s;
 }
