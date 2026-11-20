@@ -1,5 +1,5 @@
 # MOK KOM
-**MOK KOM** es un sitio web para que los estudiantes compartan experiencias, consejos de estudio, puedan hacer apuntes y tarjetas de memorización los flashcards .
+**MOK KOM** es un sitio web para que los estudiantes compartan experiencias, consejos de estudio, puedan hacer apuntes y tarjetas de memorización con flashcards .
 
 Caracteristicas
 * **Publicaciones:** permite hacer  publicaciones, filtrarlas por categoría (*Estudio*, *Motivación*, *Consejos*), dar *Me gusta* a otras publicaciones y eliminarlas.
